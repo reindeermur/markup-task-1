@@ -34,12 +34,12 @@
     <li>шаблонизация;</li>
     <li>обновление DOM.</li>
 </ul>
-<blockquote><i>— «Ок, теперь у нас есть метрики, мы можем отправить их на сервер»</i> - говорим мы</blockquote>
-<blockquote><i>— «Что же дальше?»</i> - вопрошаете вы</blockquote>
-<blockquote><i>— «А давай построим график!»</i> - отвечаем мы</blockquote>
-<blockquote><i>— «А что будем считать?»</i> - уточняете вы</blockquote>
+<blockquote>— «Ок, теперь у нас есть метрики, мы можем отправить их на сервер» - говорим мы</blockquote>
+<blockquote>— «Что же дальше?»- вопрошаете вы</blockquote>
+<blockquote>— «А давай построим график!» - отвечаем мы</blockquote>
+<blockquote>— «А что будем считать?» - уточняете вы</blockquote>
 
-<p>Как вы знаете, <u>медиана – это серединное, а не среднее значение в выборке</u>.
+<p>Как вы знаете, <em>медиана – это серединное, а не среднее значение в выборке</em>.
     Если у нас имеются числа 1, 2, 2, 3, 8, 10, 20, то медиана – 3, а среднее – 6,5.
     В общем случае медиана отлично показывает, сколько грузится средний пользователь.</p>
 <p>В случае ускорения или замедления медиана, конечно, изменится. Но она не может
@@ -70,7 +70,7 @@
 <code>var totalTime = this.timings['look-ma-finish'] - this.timings['look-ma-im-start'];</code>
 <p>И на сервер прилетают подобные записи:</p>
 <code>
-    serverResponse=50&domUpdate=60
+    serverResponse=50&#38;domUpdate=60
 </code>
 <hr>
 <h3>Как мы ускоряем</h3>
@@ -133,13 +133,18 @@
             дано &#949;, x<sub>0</sub>
             инициализировать H<sub>0</sub>
             k=0
-            <b>while</b> ||&#8711;&#402;<sub>k</sub>||&#62;&#949;
+            <strong>while</strong>
+                ||&#8711;&#402;<sub>k</sub>||&#62;&#949;
                 p<sub>k</sub>=-C<sub>k</sub>&#8711;&#402;<sub>k</sub>
-                вычислить x<sub>k+1</sub>=x<sub>k</sub>+&alpha;<sub>k</sub>p<sub>k</sub>, &alpha;<sub>k</sub> удовлетворяет условию Вольфе
-                обозначить s<sub>k</sub>=x<sub>k+1</sub>-x<sub>k</sub> и y<sub>k</sub>=&#8711;&#402;<sub>k+1</sub>-&#8711;&#402;<sub>k</sub>
+                <nobr>вычислить x<sub>k+1</sub>=x<sub>k</sub>+
+                    &alpha;<sub>k</sub>p<sub>k</sub>,
+                    &alpha;<sub>k</sub> удовлетворяет условию Вольфе</nobr>
+                <nobr>обозначить s<sub>k</sub>=x<sub>k+1</sub>-x<sub>k</sub> и
+                    y<sub>k</sub>=&#8711;&#402;<sub>k+1</sub>
+                    -&#8711;&#402;<sub>k</sub></nobr>
                 вычислить C<sub>k+1</sub>
                 k=k+1
-            <b>end</b>
+            <strong>end</strong>
         </pre>
 </fieldset>
 <p>Почему именно алгоритм Флетчера, а не другие популярные алгоритмы вроде:
@@ -161,24 +166,30 @@
 <hr>
 <p>Автор: @doochik</p>
 <p>С++ разработик</p>
-<p>Электронная почта: <a href="mailto:doochik@yandex-team.ru">doochik@yandex-team.ru</a></p>
+<p>Электронная почта: <a href="mailto:doochik@yandex-team.ru">
+    doochik@yandex-team.ru</a></p>
 <p>Компания: Яндекс</p>
 <hr>
 <fieldset>
     <legend>Комментарии (3):</legend>
-    <p>- Mogaika <a href="mailto:mogaika@yandex-team.ru">(mogaika@yandex-team.ru)</a> 30 ноября 2014 в 17:05</p>
+    <p>- Mogaika <a href="mailto:mogaika@yandex-team.ru">
+        (mogaika@yandex-team.ru)</a> 30 ноября 2014 в 17:05</p>
     <cite>А можете привести сравнение, на сколько быстрее грузится lite версия?</cite>
-    <p>- JIguse <a href="mailto:mrawesome@yandex.ru">(mrawesome@yandex.ru)</a> 29 ноября 2014 в 21:30</p>
+    <p>- JIguse <a href="mailto:mrawesome@yandex.ru">
+        (mrawesome@yandex.ru)</a> 29 ноября 2014 в 21:30</p>
     <cite> Спасибо за статью, познавательно. Здорово, что Яндекс делится некоторыми
         подробностями о внутренней работе сервисов.</cite>
-    <p>- Brister <a href="mailto:brist89@yandex-team.ru">(brist89@yandex-team.ru)</a> 24 ноября 2014 в 13:13</p>
+    <p>- Brister <a href="mailto:brist89@yandex-team.ru">
+        (brist89@yandex-team.ru)</a> 24 ноября 2014 в 13:13</p>
     <cite>(кол-во счастливых пользователей + кол-во удовлетворенных / 2) / (кол-во всех).
         Получается значение от нуля до единицы, которое, видимо, лучше всего показывает,
         хорошо или плохо работает почта.</cite><br>
     <cite>наверное все-таки от 0.5 до 1</cite>
-    <p>- alexeimois <a href="mailto:test@yandex.ru">(test@yandex.ru)</a> 22 ноября 2014 в 17:35</p>
+    <p>- alexeimois <a href="mailto:test@yandex.ru">
+        (test@yandex.ru)</a> 22 ноября 2014 в 17:35</p>
     <cite>Мы измеряем скорость загрузки с помощью Яндекс.Метрики:
-        <a href="http://help.yandex.ru/metrika/reports/monitoring_timing.xml">help.yandex.ru/metrika/reports/monitoring_timing.xml</a></cite>
+        <a href="http://help.yandex.ru/metrika/reports/monitoring_timing.xml">
+            help.yandex.ru/metrika/reports/monitoring_timing.xml</a></cite>
 </fieldset>
 <hr>
 <footer>
